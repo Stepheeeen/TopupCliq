@@ -1,10 +1,17 @@
+'use-client'
 import React from "react";
-import { Router, Route, Routes } from "react-router";
+// styling
+import './index.css'
+// Routes
+// eslint-disable-next-line
+import ReactDOM from "react-dom/client";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Login from './Pages/Authentication/Login/index'
 import Signup from './Pages/Authentication/Signup/index'
 import TransactionPin from './Pages/Authentication/TransactionPin/index'
 import VerifyPin from './Pages/Authentication/VerifyPin/index'
 import ForgetPassword from './Pages/Authentication/ForgetPassword/index'
+import ResetPassword from './Pages/Authentication/ResetPassword/index'
 
 function App() {
   return (
@@ -15,6 +22,7 @@ function App() {
         <Route path="/TransactionPin" element={<TransactionPin/>} />
         <Route path="/VerifyPin" element={<VerifyPin/>} />
         <Route path="/ForgetPassword" element={<ForgetPassword/>} />
+        <Route path="/ResetPassword" element={<ResetPassword/>} />
       </Routes>
     </Router>
   );

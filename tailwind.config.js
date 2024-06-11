@@ -15,9 +15,6 @@ module.exports = {
         'custom-gray': '#464858',
         'custom-bg': '#C0C0C0', 
       },
-      backgroundImage: {
-        'auth-bg': "url('src/Assets/Images/auth-background.svg')",
-      },
     },
   },
   plugins: [],

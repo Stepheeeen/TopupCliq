@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.bg-auth {
+    background-image: url("./Assets/Images/auth-background.svg");
+    background-size: cover;
+    background-position: center;
+  }
+
+  ::-webkit-scrollbar{
+    display: none;
+  }
+  #none{
+    padding-top: 0;
+  }
+/* Hide the number input spinner */
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield; /* Firefox */
+}
