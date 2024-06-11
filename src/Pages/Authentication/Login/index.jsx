@@ -16,8 +16,8 @@ const index = () => {
 
             <div>
                 <div className='my-[18px] mb-3'>
-                    <h1 className='text-custom-black font-medium'>Log in to your account</h1>
-                    <p className='text-custom-gray font-medium '>Securely Log in to your account</p>
+                    <h1 className='text-custom-black font-[700]'>Log in to your account</h1>
+                    <p className='text-custom-gray font-[700] text-[16px]'>Securely Log in to your account</p>
                 </div>
 
                 <form action="" className='w-full flex flex-col justify-between items-center'>
@@ -30,7 +30,7 @@ const index = () => {
                         <Link className='text-primary mt-[10px] mb-[40px] font-medium'>
                         I forgot my password
                         </Link>
-
+                    
                     <PrimaryBtn size="large" CustomBg="bg-primary" variant="contained" text="Log in" styling="w-full mt-[20px]"/>
 
                     <div className='font-medium mt-[10px] mb-[5px]'>

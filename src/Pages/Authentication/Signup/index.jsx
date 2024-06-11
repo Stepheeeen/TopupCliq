@@ -13,7 +13,7 @@ const index = () => {
             </div>
 
             <div className='my-[18px] mb-3'>
-                <h1 className='text-custom-black font-medium'>Create account</h1>
+                <h1 className='text-custom-black font-[700]'>Create account</h1>
             </div>
             <form action="" className='w-full flex flex-col justify-between items-center'>
                 <CustomTextField
@@ -29,7 +29,7 @@ const index = () => {
                 <CustomTextField
                     label="Confirm Password" type="password" margin="normal" />
                 <br />
-                <PrimaryBtn size="large" CustomBg="bg-primary" variant="contained" text="Log in" styling="w-full mt-[20px]" />
+                <PrimaryBtn size="large" CustomBg="bg-primary" variant="contained" text="Create Account" styling="w-full mt-[20px]" />
 
                 <div className='font-medium mt-[10px] mb-[5px]'>
                         Have an account? {" "}
