@@ -34,6 +34,14 @@ body{
     background-color: blue;
   }
 
+  .sidebar .icon-svg path {
+    transition: stroke 0.3s ease;
+  }
+  
+  .sidebar:hover .icon-svg path {
+    stroke: #2948CE;
+  }
+
 /* Hide the number input spinner */
 input[type='number']::-webkit-outer-spin-button,
 input[type='number']::-webkit-inner-spin-button {

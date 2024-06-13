@@ -19,11 +19,14 @@ const DashboardStructure = ({children, bool}) => {
     {pagename: 'Logout', icon: <Logout/> , navpage: '/', color: 'red',},
   ]
   return (
-    <section>
+    <section className='flex'>
       <Sidebar pages={pages} isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
+
+      <div className='w-[80%]'>
       <Navbar />
       <div>
         {children}
+      </div>
       </div>
     </section>
   )
