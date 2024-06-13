@@ -2,21 +2,21 @@ import React from 'react'
 import { useState } from 'react'
 import Sidebar from '../../Components/Sidebar'
 import Navbar from '../../Components/Navbar'
-import DashboardIcon from '../../Assets/Images/Dashboard.svg'
-import TransactionIcon from '../../Assets/Images/Transaction.svg'
-import BeneficiariesIcon from '../../Assets/Images/Beneficiaries.svg'
-import ProfileIcon from '../../Assets/Images/Profile.svg'
-import LogoutIcon from '../../Assets/Images/Logout.svg'
+import Beneficiaries from '../../Assets/Images/Beneficiaries'
+import Dashboard from '../../Assets/Images/Dashboard'
+import Transaction from '../../Assets/Images/Transaction'
+import Profile from '../../Assets/Images/Profile'
+import Logout from '../../Assets/Images/Logout'
 
 const DashboardStructure = ({children}) => {
   // eslint-disable-next-line
   const [isLoggedIn, setIsLoggedIn] = useState(true)
   const pages = [
-    {pagename: 'Dashboard', icon: DashboardIcon , navpage: 'signup', active: 'true'},
-    {pagename: 'Transactions', icon: TransactionIcon , navpage: '/',},
-    {pagename: 'Beneficiaries', icon: BeneficiariesIcon , navpage: '/',},
-    {pagename: 'Settings', icon: ProfileIcon , navpage: '/',},
-    {pagename: 'Logout', icon: LogoutIcon , navpage: '/', color: 'red',},
+    {pagename: 'Dashboard', icon: <Dashboard/> , navpage: 'signup', active: 'true', hover: 'secondary'},
+    {pagename: 'Transactions', icon: <Transaction/> , navpage: '/', hover: 'secondary'},
+    {pagename: 'Beneficiaries', icon: <Beneficiaries/> , navpage: '/', hover: 'secondary'},
+    {pagename: 'Settings', icon: <Profile/> , navpage: '/', hover: 'secondary'},
+    {pagename: 'Logout', icon: <Logout/> , navpage: '/', color: 'red', hover: 'custom-red'},
   ]
   return (
     <section>
