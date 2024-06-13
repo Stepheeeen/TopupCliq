@@ -17,7 +17,7 @@ const index = () => {
             <div>
                 <div className='my-[18px] mb-3'>
                     <h1 className='text-custom-black font-[700]'>Log in to your account</h1>
-                    <p className='text-custom-gray font-[700] text-[16px]'>Securely Log in to your account</p>
+                    <p className='text-custom-gray font-[600] text-[14px]'>Securely Log in to your account</p>
                 </div>
 
                 <form action="" className='w-full flex flex-col justify-between items-center'>

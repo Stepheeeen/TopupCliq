@@ -23,6 +23,14 @@ body{
   #none{
     padding-top: 0;
   }
+
+  #red{
+    color: #FF4040;
+  }
+  #active{
+    background-color: blue;
+  }
+
 /* Hide the number input spinner */
 input[type='number']::-webkit-outer-spin-button,
 input[type='number']::-webkit-inner-spin-button {

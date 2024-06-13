@@ -12,6 +12,8 @@ import TransactionPin from './Pages/Authentication/TransactionPin/index'
 import VerifyPin from './Pages/Authentication/VerifyPin/index'
 import ForgetPassword from './Pages/Authentication/ForgetPassword/index'
 import ResetPassword from './Pages/Authentication/ResetPassword/index'
+import Dashboard1 from './Pages/Dashboard/UserDashboard/NotLoggedIn'
+import Dashboard from './Pages/Dashboard/UserDashboard/LoggedIn'
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
         <Route path="/VerifyPin" element={<VerifyPin/>} />
         <Route path="/ForgetPassword" element={<ForgetPassword/>} />
         <Route path="/ResetPassword" element={<ResetPassword/>} />
+        <Route path="/Dashboard" element={<Dashboard/>} />
+        <Route path="/TopupCliq" element={<Dashboard1/>} />
       </Routes>
     </Router>
   );
