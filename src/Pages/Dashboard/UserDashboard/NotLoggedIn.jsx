@@ -3,7 +3,7 @@ import DashboardStructure from '..'
 
 const NotLoggedIn = () => {
   return (
-    <DashboardStructure>
+    <DashboardStructure bool={false}>
         
     </DashboardStructure>
   )

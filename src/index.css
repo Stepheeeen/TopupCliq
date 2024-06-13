@@ -27,6 +27,9 @@ body{
   #red{
     color: #FF4040;
   }
+  #red:hover {
+    background-color: #ff404038;
+  }
   #active{
     background-color: blue;
   }

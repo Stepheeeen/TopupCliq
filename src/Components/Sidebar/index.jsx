@@ -14,7 +14,7 @@ const Sidebar = ({ pages = [], isLoggedIn }) => {
           to={isLoggedIn ? `/${page.navpage}` : '/'} 
           key={index} 
           id={page.color} 
-          className={`hover:bg-${page.hover}/[0.20] flex mt-[5px] hover:text-[#2948CE] hover:stroke-[#2948CE] items-center p-3 rounded`}
+          className={`flex mt-[5px] hover:text-[#2948CE] hover:bg-secondary/[0.2] items-center p-3 rounded`}
           activeClassName={`bg-${page.navpage}-active`}
           isActive={(match, location) => location.pathname === `/${page.navpage}`}
           >

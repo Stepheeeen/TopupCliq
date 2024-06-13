@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState } from 'react';
 import Sidebar from '../../Components/Sidebar'
 import Navbar from '../../Components/Navbar'
 import Beneficiaries from '../../Assets/Images/Beneficiaries'
@@ -8,19 +8,19 @@ import Transaction from '../../Assets/Images/Transaction'
 import Profile from '../../Assets/Images/Profile'
 import Logout from '../../Assets/Images/Logout'
 
-const DashboardStructure = ({children}) => {
-  // eslint-disable-next-line
-  const [isLoggedIn, setIsLoggedIn] = useState(true)
+const DashboardStructure = ({children, bool}) => {
+  const [isLoggedIn, setIsLoggedIn] = useState(bool);
+
   const pages = [
-    {pagename: 'Dashboard', icon: <Dashboard/> , navpage: 'signup', active: 'true', hover: 'secondary'},
-    {pagename: 'Transactions', icon: <Transaction/> , navpage: '/', hover: 'secondary'},
-    {pagename: 'Beneficiaries', icon: <Beneficiaries/> , navpage: '/', hover: 'secondary'},
-    {pagename: 'Settings', icon: <Profile/> , navpage: '/', hover: 'secondary'},
-    {pagename: 'Logout', icon: <Logout/> , navpage: '/', color: 'red', hover: 'custom-red'},
+    {pagename: 'Dashboard', icon: <Dashboard/> , navpage: 'signup', active: 'true',},
+    {pagename: 'Transactions', icon: <Transaction/> , navpage: '/',},
+    {pagename: 'Beneficiaries', icon: <Beneficiaries/> , navpage: '/',},
+    {pagename: 'Settings', icon: <Profile/> , navpage: '/',},
+    {pagename: 'Logout', icon: <Logout/> , navpage: '/', color: 'red',},
   ]
   return (
     <section>
-      <Sidebar pages={pages} isLoggedIn={isLoggedIn}/>
+      <Sidebar pages={pages} isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
       <Navbar />
       <div>
         {children}
