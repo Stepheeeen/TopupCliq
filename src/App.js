@@ -14,6 +14,10 @@ import ForgetPassword from './Pages/Authentication/ForgetPassword/index'
 import ResetPassword from './Pages/Authentication/ResetPassword/index'
 import Dashboard1 from './Pages/Dashboard/UserDashboard/NotLoggedIn'
 import Dashboard from './Pages/Dashboard/UserDashboard/LoggedIn'
+import Transactions from './Pages/Transactions/index'
+import Beneficiaries from './Pages/Beneficiaries/index'
+import Settings from './Pages/Settings/index'
+import Logout from './Pages/Logout/index'
 
 function App() {
   return (
@@ -25,8 +29,12 @@ function App() {
         <Route path="/VerifyPin" element={<VerifyPin/>} />
         <Route path="/ForgetPassword" element={<ForgetPassword/>} />
         <Route path="/ResetPassword" element={<ResetPassword/>} />
-        <Route path="/Dashboard" element={<Dashboard/>} />
         <Route path="/TopupCliq" element={<Dashboard1/>} />
+        <Route path="/Dashboard" element={<Dashboard/>} />
+        <Route path="/Transactions" element={<Transactions/>} />
+        <Route path="/Beneficiaries" element={<Beneficiaries/>} />
+        <Route path="/Settings" element={<Settings/>} />
+        <Route path="/Logout" element={<Logout/>} />
       </Routes>
     </Router>
   );
