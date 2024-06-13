@@ -4,8 +4,8 @@ import Logo from '../../Assets/Images/logo.svg'
 
 const Sidebar = ({ pages = [], isLoggedIn }) => {
   return (
-    <aside className='w-[20%] h-[100vh] shadow-sm p-5 pl-4'>
-      <div className='my-[20px]'>
+    <aside className='w-[20%] h-[100vh] shadow-md p-5 pl-4'>
+      <div className='mb-[15px]'>
         <img src={Logo} alt="logo" />
       </div>
       <div className='flex flex-col text-black'>

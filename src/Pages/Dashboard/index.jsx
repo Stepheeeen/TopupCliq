@@ -24,7 +24,7 @@ const DashboardStructure = ({children, bool}) => {
 
       <div className='w-[80%]'>
       <Navbar />
-      <div>
+      <div className='bg-[#FAFAFA]'>
         {children}
       </div>
       </div>
