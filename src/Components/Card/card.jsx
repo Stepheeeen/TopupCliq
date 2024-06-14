@@ -5,7 +5,7 @@ import Fund from '../../Assets/Images/wallet-add.svg'
 
 const BalanceCard = () =>{
     return(
-        <div className='w-full rounded bg-[#2948CE] py-7 px-4 text-white flex justify-between items-center'>
+        <div className='w-full rounded bg-[#2948CE] py-9 px-4 text-white flex justify-between items-center'>
             <div>
                 <p className='text-[14px]'>Wallet Balance,</p>
 
@@ -24,11 +24,11 @@ const BalanceCard = () =>{
 
 const QuickActionCard = ({card = []}) => {
     return(
-        <div>
+        <div className='grid grid-cols-2 gap-2 items-center'>
         {card.map((cards, i) => (
-            <div key={i} className='border border-primary-[1px] rounded-md w-[50%] h-[50%]'>
+            <div key={i} className='border border-primary-[1px] rounded-lg w-full flex flex-col justify-center items-center p-[70px]'>
                 <img src={cards.icon} alt='Quick Action' />
-                <p>{cards.actionName}</p>
+                <p className='text-nowrap mt-2 font-[500] text-[18px]'>{cards.actionName}</p>
             </div>
         ))}
         </div>
@@ -36,10 +36,28 @@ const QuickActionCard = ({card = []}) => {
 }
 
 
-const TransactionHistory = () =>{
+const TransactionHistory = ({list = []}) =>{
     return(
-        <div>
-            
+        <div className='h-[475px] overflow-scroll'>
+            <ul>
+                {list.map((lists, index) => (
+                    <li key={index} className='flex justify-between items-center mt-4'>
+                        <div className='flex'>
+                            <img src={lists.svg} alt="icon" className='mr-2' />
+
+                            <div className='font-[600]'>
+                                <h1 >{lists.name}</h1>
+                                <p>{lists.status}</p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h1 className={`text-custom-green`} id={lists.color}>-NGN{" "}{lists.amount}</h1>
+                            <p>{lists.date}</p>
+                        </div>
+                    </li>
+                ))}
+            </ul>
         </div>
     )
 }

@@ -19,12 +19,12 @@ const DashboardStructure = ({children, bool}) => {
     {pagename: 'Logout', icon: <Logout/> , navpage: ' Logout', color: 'red',},
   ]
   return (
-    <section className='flex'>
+    <section className='flex overflow-scroll'>
       <Sidebar pages={pages} isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
 
-      <div className='w-[80%]'>
+      <div className='bg-[#FAFAFA] w-[80%] ml-[20%] mt-[90px]'>
       <Navbar />
-      <div className='bg-[#FAFAFA] pt-[100px] p-3 h-full'>
+      <div className=' p-3'>
         {children}
       </div>
       </div>
