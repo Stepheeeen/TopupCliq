@@ -6,7 +6,6 @@ import Beneficiaries from '../../Assets/Images/Beneficiaries'
 import Dashboard from '../../Assets/Images/Dashboard'
 import Transaction from '../../Assets/Images/Transaction'
 import Profile from '../../Assets/Images/Profile'
-import Logout from '../../Assets/Images/Logout'
 
 const DashboardStructure = ({children, bool}) => {
   const [isLoggedIn, setIsLoggedIn] = useState(bool);
@@ -16,7 +15,6 @@ const DashboardStructure = ({children, bool}) => {
     {pagename: 'Transactions', icon: <Transaction/> , navpage: '/transactions',},
     {pagename: 'Beneficiaries', icon: <Beneficiaries/> , navpage: '/beneficiaries',},
     {pagename: 'Settings', icon: <Profile/> , navpage: '/settings',},
-    {pagename: 'Logout', icon: <Logout/> , navpage: '/logout', color: 'red',},
   ]
   return (
     <section className='flex overflow-scroll'>

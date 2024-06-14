@@ -17,7 +17,6 @@ import Dashboard from './Pages/Dashboard/UserDashboard/LoggedIn'
 import Transactions from './Pages/Transactions/index'
 import Beneficiaries from './Pages/Beneficiaries/index'
 import Settings from './Pages/Settings/index'
-import Logout from './Pages/Logout/index'
 
 function App() {
   return (
@@ -34,7 +33,6 @@ function App() {
         <Route path="/transactions" element={<Transactions/>} />
         <Route path="/beneficiaries" element={<Beneficiaries/>} />
         <Route path="/settings" element={<Settings/>} />
-        <Route path="/logout" element={<Logout/>} />
       </Routes>
     </Router>
   );

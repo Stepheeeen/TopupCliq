@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Logo from '../../Assets/Images/logo.svg'
+import Logout from '../../Assets/Images/Logout'
 
 const Sidebar = ({ pages = [], isLoggedIn }) => {
   return (
@@ -13,7 +14,6 @@ const Sidebar = ({ pages = [], isLoggedIn }) => {
           <Link 
           to={isLoggedIn ? `${page.navpage}` : '/'} 
           key={index} 
-          id={page.color} 
           className={`flex mt-[5px] hover:text-[#2948CE] hover:bg-secondary/[0.2] items-center p-3 rounded sidebar`}
           activeClassName={`bg-${page.navpage}-active`}
           isActive={(match, location) => location.pathname === `${page.navpage}`}
@@ -21,10 +21,15 @@ const Sidebar = ({ pages = [], isLoggedIn }) => {
             <span className='mr-2'>{page.icon}</span>
             {page.pagename}
           </Link>
-        ))
+        ))}
 
-        }
-
+        <button
+        id="red"
+          className={`flex mt-[5px] items-center p-3 rounded sidebar`}
+          >
+            <span className='mr-2'><Logout/></span>
+          Logout
+        </button>
       </div>
     </aside>
   )
