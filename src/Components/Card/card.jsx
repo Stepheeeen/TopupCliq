@@ -9,7 +9,7 @@ const BalanceCard = () =>{
             <div>
                 <p className='text-[14px]'>Wallet Balance,</p>
 
-                <h1 className='text-[24px] font-[800] '>
+                <h1 className='text-[24px] font-[600] '>
                     NGN 200,000
                 </h1>
             </div>
