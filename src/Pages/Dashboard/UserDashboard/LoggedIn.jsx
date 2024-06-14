@@ -7,7 +7,7 @@ import TransactionCard from '../../../Components/Card/TransactionCard'
 
 const LoggedIn = () => {
   return (
-    <DashboardStructure bool={true}>
+    <DashboardStructure bool={true} pagename="Dashboard">
       <BalanceCard />
 
       <div className='flex w-full items-center mt-5 gap-6'>

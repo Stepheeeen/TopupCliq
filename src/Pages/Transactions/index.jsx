@@ -1,8 +1,11 @@
 import React from 'react'
+import DashboardStructure from '../Dashboard'
 
 const index = () => {
   return (
-    <div>index</div>
+    <DashboardStructure bool={true} pagename="Transactions">
+
+    </DashboardStructure>
   )
 }
 

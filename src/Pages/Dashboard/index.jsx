@@ -7,7 +7,7 @@ import Dashboard from '../../Assets/Images/Dashboard'
 import Transaction from '../../Assets/Images/Transaction'
 import Profile from '../../Assets/Images/Profile'
 
-const DashboardStructure = ({children, bool}) => {
+const DashboardStructure = ({children, bool, pagename}) => {
   const [isLoggedIn, setIsLoggedIn] = useState(bool);
 
   const pages = [
@@ -21,7 +21,7 @@ const DashboardStructure = ({children, bool}) => {
       <Sidebar pages={pages} isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
 
       <div className='bg-[#FAFAFA] w-[80%] ml-[20%] mt-[90px]'>
-      <Navbar />
+      <Navbar pagename={pagename}/>
       <div className=' p-3'>
         {children}
       </div>
