@@ -24,17 +24,17 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Login/>} />
-        <Route path="/Signup" element={<Signup/>} />
-        <Route path="/TransactionPin" element={<TransactionPin/>} />
-        <Route path="/VerifyPin" element={<VerifyPin/>} />
-        <Route path="/ForgetPassword" element={<ForgetPassword/>} />
-        <Route path="/ResetPassword" element={<ResetPassword/>} />
-        <Route path="/TopupCliq" element={<Dashboard1/>} />
-        <Route path="/Dashboard" element={<Dashboard/>} />
-        <Route path="/Transactions" element={<Transactions/>} />
-        <Route path="/Beneficiaries" element={<Beneficiaries/>} />
-        <Route path="/Settings" element={<Settings/>} />
-        <Route path="/Logout" element={<Logout/>} />
+        <Route path="/signup" element={<Signup/>} />
+        <Route path="/transactionPin" element={<TransactionPin/>} />
+        <Route path="/verifyPin" element={<VerifyPin/>} />
+        <Route path="/forgetPassword" element={<ForgetPassword/>} />
+        <Route path="/resetPassword" element={<ResetPassword/>} />
+        <Route path="/topupCliq" element={<Dashboard1/>} />
+        <Route path="/dashboard" element={<Dashboard/>} />
+        <Route path="/transactions" element={<Transactions/>} />
+        <Route path="/beneficiaries" element={<Beneficiaries/>} />
+        <Route path="/settings" element={<Settings/>} />
+        <Route path="/logout" element={<Logout/>} />
       </Routes>
     </Router>
   );

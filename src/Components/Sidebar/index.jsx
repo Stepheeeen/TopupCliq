@@ -11,12 +11,12 @@ const Sidebar = ({ pages = [], isLoggedIn }) => {
       <div className='flex flex-col text-black'>
         {pages.map((page, index) => (
           <Link 
-          to={isLoggedIn ? `/${page.navpage}` : '/'} 
+          to={isLoggedIn ? `${page.navpage}` : '/'} 
           key={index} 
           id={page.color} 
           className={`flex mt-[5px] hover:text-[#2948CE] hover:bg-secondary/[0.2] items-center p-3 rounded sidebar`}
           activeClassName={`bg-${page.navpage}-active`}
-          isActive={(match, location) => location.pathname === `/${page.navpage}`}
+          isActive={(match, location) => location.pathname === `${page.navpage}`}
           >
             <span className='mr-2'>{page.icon}</span>
             {page.pagename}

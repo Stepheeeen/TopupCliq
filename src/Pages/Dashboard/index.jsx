@@ -12,11 +12,11 @@ const DashboardStructure = ({children, bool}) => {
   const [isLoggedIn, setIsLoggedIn] = useState(bool);
 
   const pages = [
-    {pagename: 'Dashboard', icon: <Dashboard/> , navpage: ' Dashboard', active: 'true',},
-    {pagename: 'Transactions', icon: <Transaction/> , navpage: '  Transactions',},
-    {pagename: 'Beneficiaries', icon: <Beneficiaries/> , navpage: ' Beneficiaries',},
-    {pagename: 'Settings', icon: <Profile/> , navpage: '  Settings',},
-    {pagename: 'Logout', icon: <Logout/> , navpage: ' Logout', color: 'red',},
+    {pagename: 'Dashboard', icon: <Dashboard/> , navpage: '/dashboard',},
+    {pagename: 'Transactions', icon: <Transaction/> , navpage: '/transactions',},
+    {pagename: 'Beneficiaries', icon: <Beneficiaries/> , navpage: '/beneficiaries',},
+    {pagename: 'Settings', icon: <Profile/> , navpage: '/settings',},
+    {pagename: 'Logout', icon: <Logout/> , navpage: '/logout', color: 'red',},
   ]
   return (
     <section className='flex overflow-scroll'>

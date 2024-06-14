@@ -45,9 +45,9 @@ const TransactionHistory = ({list = []}) =>{
                         <div className='flex'>
                             <img src={lists.svg} alt="icon" className='mr-2' />
 
-                            <div className='font-[600]'>
-                                <h1 >{lists.name}</h1>
-                                <p>{lists.status}</p>
+                            <div >
+                                <h1 className='font-[600]'>{lists.name}</h1>
+                                <p className='font-[400]'>{lists.status}</p>
                             </div>
                         </div>
 
