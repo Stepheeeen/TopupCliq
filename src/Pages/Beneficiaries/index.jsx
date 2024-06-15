@@ -4,7 +4,7 @@ import DashboardStructure from '../Dashboard'
 const index = () => {
   return (
     <DashboardStructure bool={true} pagename="Beneficiaries">
-
+        bene
     </DashboardStructure>
   )
 }
