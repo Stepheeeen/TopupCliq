@@ -1,4 +1,4 @@
-import React, { useState }  from 'react'
+import React, { useState } from 'react'
 import Container from './Container'
 import { QuickActionCard } from './card'
 import Airtime from '../../Assets/Images/airtime.svg'
@@ -31,15 +31,43 @@ const QuickAction = () => {
   const elecOpen = () => setElec(true);
   const elecClose = () => setElec(false);
 
-    const card = [
-        {icon: Airtime , actionName: 'Buy Airtime', children: <AirtimeComp/>, open: airtime, handleOpen: airtimeOpen, handleClose: airtimeClose, },
-        {icon: Data , actionName: 'Buy Data', open: data, handleOpen: dataOpen, handleClose:dataClose, children: <DataComp />},
-        {icon: Cable , actionName: 'Cable Payment', open: cable, handleOpen: cableOpen, handleClose:cableClose, children: <CableComp />},
-        {icon: Electricity , actionName: 'Electricity Payment', open: elec, handleOpen: elecOpen, handleClose:elecClose, children: <ElecComp />},
-        ]
+  const card = [
+    {
+      icon: Airtime,
+      actionName: 'Buy Airtime',
+      children: <AirtimeComp />,
+      open: airtime,
+      handleOpen: airtimeOpen,
+      handleClose: airtimeClose,
+    },
+    {
+      icon: Data,
+      actionName: 'Buy Data',
+      open: data,
+      handleOpen: dataOpen,
+      handleClose: dataClose,
+      children: <DataComp />
+    },
+    {
+      icon: Cable,
+      actionName: 'Cable Payment',
+      open: cable,
+      handleOpen: cableOpen,
+      handleClose: cableClose,
+      children: <CableComp />
+    },
+    {
+      icon: Electricity,
+      actionName: 'Electricity Payment',
+      open: elec,
+      handleOpen: elecOpen,
+      handleClose: elecClose,
+      children: <ElecComp />
+    },
+  ]
   return (
     <Container tag="Quick actions">
-        <QuickActionCard card={card}/>
+      <QuickActionCard card={card} />
     </Container>
   )
 }
