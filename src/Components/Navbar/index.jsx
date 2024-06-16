@@ -4,7 +4,7 @@ import Profile from '../../Assets/Images/Profile'
 
 const Navbar = ({pagename}) => {
   return (
-    <nav className=' w-[80%] fixed top-0 left-[20%] p-5 h-[90px] shadow-sm flex justify-between items-center bg-white'>
+    <nav className=' w-[80%] fixed top-0 left-[20%] p-5 h-[90px] shadow-sm flex justify-between items-center bg-white z-10'>
       <h1 className='font-[500] text-xl'>
       {pagename}
       </h1>
