@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Airtime = () => {
+const Electricity = () => {
   return (
     <div>
-      hello
+      
     </div>
   )
 }
 
-export default Airtime
+export default Electricity

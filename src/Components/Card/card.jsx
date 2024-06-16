@@ -4,6 +4,7 @@ import Balance from '../Button/Balance';
 import Send from '../../Assets/Images/send-2.svg'
 import Fund from '../../Assets/Images/wallet-add.svg'
 import ModalComponent from '../Modal/Pin';
+import Airtime from '../QuickAction/Airtime';
 
 const BalanceCard = () =>{
     const [open, setOpen] = useState(false);
@@ -62,7 +63,7 @@ const QuickActionCard = ({card = []}) => {
 
         
             <ModalComponent open={open} handleClose={handleClose}>
-                quick action
+                <Airtime />
             </ModalComponent>
         </div>
     )

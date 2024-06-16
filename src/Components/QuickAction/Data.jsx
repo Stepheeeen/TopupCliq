@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Airtime = () => {
+const Data = () => {
   return (
     <div>
-      hello
+      
     </div>
   )
 }
 
-export default Airtime
+export default Data
