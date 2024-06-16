@@ -3,7 +3,7 @@ import React from 'react'
 const Airtime = () => {
   return (
     <div>
-      hello
+      airtime
     </div>
   )
 }

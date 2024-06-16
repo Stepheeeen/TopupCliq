@@ -4,7 +4,6 @@ import Balance from '../Button/Balance';
 import Send from '../../Assets/Images/send-2.svg'
 import Fund from '../../Assets/Images/wallet-add.svg'
 import ModalComponent from '../Modal/Pin';
-import Airtime from '../QuickAction/Airtime';
 
 const BalanceCard = () =>{
     const [open, setOpen] = useState(false);
@@ -48,23 +47,22 @@ const BalanceCard = () =>{
 }
 
 const QuickActionCard = ({card = []}) => {
-    const [open, setOpen] = useState(false)
-
-    const handleOpen = () => setOpen(true);
-    const handleClose = () => setOpen(false);
     return(
         <div className='grid grid-cols-2 gap-2 items-center'>
         {card.map((cards, i) => (
-            <div key={i} onClick={handleOpen} className='border border-primary-[1px] rounded-lg w-full flex flex-col justify-center items-center p-[70px] cursor-pointer'>
+            <>
+            <div key={i} onClick={cards.handleOpen} className='border border-primary-[1px] rounded-lg w-full flex flex-col justify-center items-center p-[70px] cursor-pointer'>
                 <img src={cards.icon} alt='Quick Action' />
                 <p className='text-nowrap mt-2 font-[500] text-[18px]'>{cards.actionName}</p>
             </div>
+            <ModalComponent open={cards.open} handleClose={cards.handleClose}>
+                {cards.children}
+            </ModalComponent>
+            </>
         ))}
 
         
-            <ModalComponent open={open} handleClose={handleClose}>
-                <Airtime />
-            </ModalComponent>
+            
         </div>
     )
 }
