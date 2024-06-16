@@ -1,9 +1,19 @@
 import React from 'react'
+import { useState } from 'react';
 import Balance from '../Button/Balance';
 import Send from '../../Assets/Images/send-2.svg'
 import Fund from '../../Assets/Images/wallet-add.svg'
+import ModalComponent from '../Modal/Pin';
 
 const BalanceCard = () =>{
+    const [open, setOpen] = useState(false);
+
+    const handleOpen = () => setOpen(true);
+    const handleClose = () => setOpen(false);
+
+    const [on, setOn] = useState(false);
+    const onOpen = () => setOn(true);
+    const Close = () => setOn(false);
     return(
         <div className='w-full rounded bg-[#2948CE] py-9 px-4 text-white flex justify-between items-center'>
             <div>
@@ -15,22 +25,45 @@ const BalanceCard = () =>{
             </div>
 
             <div className='flex'>
-                <Balance Icon={Fund} text="Fund Wallet"/>
-                <Balance Icon={Send} text="Send to User"/>
+                <Balance Icon={Fund} text="Fund Wallet" handleOpen={handleOpen}/>
+                
+                <Balance Icon={Send} text="Send to User" handleOpen={onOpen}/>
             </div>
+
+            <ModalComponent open={open} handleClose={handleClose}>
+            <div className=' mt-10 '>
+            <p className=' mb-3 text-back-color2'>Enter your Zouse PIN</p>
+            <p className=' mb-3 text-[#808285]'>Enter your 4-Digit PIN to confirm transaction</p>
+            </div>
+            </ModalComponent>
+
+            <ModalComponent open={on} handleClose={Close}>
+            <div className=' mt-10 '>
+            <p className=' mb-3 text-back-color2'>Enter your Zouse PIN</p>
+            </div>
+            </ModalComponent>
         </div>
     );
 }
 
 const QuickActionCard = ({card = []}) => {
+    const [open, setOpen] = useState(false)
+
+    const handleOpen = () => setOpen(true);
+    const handleClose = () => setOpen(false);
     return(
         <div className='grid grid-cols-2 gap-2 items-center'>
         {card.map((cards, i) => (
-            <div key={i} className='border border-primary-[1px] rounded-lg w-full flex flex-col justify-center items-center p-[70px]'>
+            <div key={i} onClick={handleOpen} className='border border-primary-[1px] rounded-lg w-full flex flex-col justify-center items-center p-[70px] cursor-pointer'>
                 <img src={cards.icon} alt='Quick Action' />
                 <p className='text-nowrap mt-2 font-[500] text-[18px]'>{cards.actionName}</p>
             </div>
         ))}
+
+        
+            <ModalComponent open={open} handleClose={handleClose}>
+                quick action
+            </ModalComponent>
         </div>
     )
 }
