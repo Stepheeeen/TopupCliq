@@ -1,10 +1,14 @@
 import React from 'react'
+import Modal from '../Card/modalCont'
+import cancelIcon from '../../Assets/Images/cancelIcon.svg'
+// import returnIcon from '../../Assets/Images/returnIcon.svg'
+
 
 const Airtime = () => {
   return (
-    <div>
-      
-    </div>
+    <Modal cancelbtn={cancelIcon}  text='pay' title='Buy Airtime' hide='hide'>
+      hello
+    </Modal>
   )
 }
 

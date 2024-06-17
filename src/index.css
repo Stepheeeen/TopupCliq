@@ -44,6 +44,9 @@ body{
   .sidebar:hover .icon-svg path {
     stroke: #2948CE;
   }
+  #hide{
+    display: none;
+  }
 
 /* Hide the number input spinner */
 input[type='number']::-webkit-outer-spin-button,

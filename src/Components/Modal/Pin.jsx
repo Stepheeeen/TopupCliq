@@ -10,7 +10,7 @@ const modalStyle = {
   width: 400,
   bgcolor: 'background.paper',
   boxShadow: 24,
-  p: 4,
+  // p: 4,
 };
 
 const ModalComponent = ({ open, handleClose, children }) => {
@@ -23,7 +23,7 @@ const ModalComponent = ({ open, handleClose, children }) => {
       aria-describedby="transition-modal-description"
     >
 
-        <Box sx={modalStyle} className='rounded-lg p-6 pt-10'>
+        <Box sx={modalStyle} className='rounded-lg'>
               {children}
         </Box>
     </Modal>
