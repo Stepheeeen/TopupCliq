@@ -3,12 +3,12 @@ import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import MenuItem from "@mui/material/MenuItem";
 
-const select = ({selectProviders =[], selectText, marginTop}) => {
+const select = ({selectProviders =[], selectText, marginTop, marginBottom}) => {
   return (
     <Box
     component="form"
     sx={{
-      "& .MuiTextField-root": {marginTop: {marginTop}, width: "100%" },
+      "& .MuiTextField-root": {marginTop: {marginTop}, marginBottom: {marginBottom} , width: "100%" },
     }}
     noValidate
     autoComplete="off"

@@ -8,7 +8,7 @@ import Naira from '../../Assets/Images/Naira.png'
 import CustomizedSwitches from '../Input/switch.jsx'
 import CustomTextField from '../Input/input.jsx'
 
-const Airtime = () => {
+const Airtime = ({closeIcon}) => {
   const selectProviders = [
     {
       value: "USD",
@@ -38,7 +38,7 @@ const Airtime = () => {
       },
   ]
   return (
-    <Modal cancelbtn={cancelIcon}  text='pay' title='Buy Airtime' hide='hide'>
+    <Modal cancelbtn={cancelIcon}  text='pay' title='Buy Airtime' hide='hide' handleClose={closeIcon}>
       <Select selectProviders={selectProviders} selectText='Select network provider'/>
       <CustomInput type='Phone number' image={Code} placeholder='Phone number' />
       <CustomInput type='Amount' image={Naira} placeholder='Amount' />

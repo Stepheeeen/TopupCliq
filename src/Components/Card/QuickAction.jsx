@@ -35,7 +35,7 @@ const QuickAction = () => {
     {
       icon: Airtime,
       actionName: 'Buy Airtime',
-      children: <AirtimeComp />,
+      children: <AirtimeComp closeIcon={airtimeClose} />,
       open: airtime,
       handleOpen: airtimeOpen,
       handleClose: airtimeClose,
@@ -46,7 +46,7 @@ const QuickAction = () => {
       open: data,
       handleOpen: dataOpen,
       handleClose: dataClose,
-      children: <DataComp />
+      children: <DataComp closeIcon={dataClose}/>
     },
     {
       icon: Cable,
@@ -54,7 +54,7 @@ const QuickAction = () => {
       open: cable,
       handleOpen: cableOpen,
       handleClose: cableClose,
-      children: <CableComp />
+      children: <CableComp closeIcon={cableClose} />
     },
     {
       icon: Electricity,
@@ -62,7 +62,7 @@ const QuickAction = () => {
       open: elec,
       handleOpen: elecOpen,
       handleClose: elecClose,
-      children: <ElecComp />
+      children: <ElecComp closeIcon={elecClose} />
     },
   ]
   return (

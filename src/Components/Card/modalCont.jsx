@@ -2,7 +2,7 @@ import React from 'react'
 import { PrimaryBtn } from '../Button/button'
 import { Link } from 'react-router-dom'
 
-const modalCont = ({backbtn, title, cancelbtn, children, text, hide}) => {
+const modalCont = ({backbtn, title, cancelbtn, children, text, hide, handleClose}) => {
   const style = {
     backgroundColor : '#2948CE',
   }
@@ -16,7 +16,7 @@ const modalCont = ({backbtn, title, cancelbtn, children, text, hide}) => {
         <h1 className='text-custom-black text-[18px] font-[700]'>
             {title}
         </h1>
-        <Link className='cursor-pointer'>
+        <Link className='cursor-pointer' onClick={handleClose}>
         <img src={cancelbtn} alt="" />
         </Link>
 
