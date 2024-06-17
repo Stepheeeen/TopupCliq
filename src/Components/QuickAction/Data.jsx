@@ -5,7 +5,7 @@ import cancelIcon from '../../Assets/Images/cancelIcon.svg'
 
 const Data = () => {
   return (
-    <Modal cancelbtn={cancelIcon}  text='pay' title='Buy Airtime' hide='hide'>
+    <Modal cancelbtn={cancelIcon}  text='pay' title='Buy Data' hide='hide'>
       hello
     </Modal>
   )
