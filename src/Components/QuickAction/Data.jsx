@@ -57,12 +57,12 @@ const Data = ({closeIcon}) => {
   ];
   return (
     <Modal cancelbtn={cancelIcon}  text='pay' title='Buy Data' hide='hide' handleClose={closeIcon}>
-      <Select selectProviders={selectProviders} selectText='Select network provider'/>
+      <Select selectProviders={selectProviders} selectText='Select network provider' width='100%' />
       <br />
-      <Select selectProviders={selectPlan} selectText='Select plan'/>
+      <Select selectProviders={selectPlan} selectText='Select plan' width='100%' />
       <CustomInput type='Phone number' image={Code} placeholder='Phone number' />
       {/* <CustomInput type='Amount' image={Naira} placeholder='Amount' /> */}
-      <Select selectProviders={selectMethod} marginTop='10px' selectText='Payment Method' />
+      <Select selectProviders={selectMethod} marginTop='10px' selectText='Payment Method' width='100%'  />
       <div className='w-full my-[10px] p-2 flex justify-between items-center'>
         <p>
           Add to Beneficiary

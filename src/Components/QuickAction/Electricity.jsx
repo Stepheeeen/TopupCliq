@@ -56,11 +56,11 @@ const Electricity = ({ closeIcon }) => {
   ]
   return (
     <Modal cancelbtn={cancelIcon} text='pay' title='Electricity Payment' hide='hide' handleClose={closeIcon}>
-      <Select selectProviders={selectBillers} selectText='Select biller' />
-      <Select selectProviders={selectPlan} selectText='Select plan' marginTop='18px' marginBottom='18px' />
+      <Select selectProviders={selectBillers} selectText='Select biller' width='100%' />
+      <Select selectProviders={selectPlan} selectText='Select plan' marginTop='18px' marginBottom='18px' width='100%' />
       <CustomTextField type='text' label='Meter number' />
       <CustomInput type='Amount' image={Naira} placeholder='Amount' />
-      <Select selectProviders={selectMethod} marginTop='10px' selectText='Payment Method' />
+      <Select selectProviders={selectMethod} marginTop='10px' selectText='Payment Method' width='100%'  />
       <div className='w-full my-[10px] p-2 flex justify-between items-center'>
         <p>
           Add to Beneficiary
