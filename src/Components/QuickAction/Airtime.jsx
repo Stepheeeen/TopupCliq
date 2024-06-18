@@ -40,8 +40,8 @@ const Airtime = ({closeIcon}) => {
   return (
     <Modal cancelbtn={cancelIcon}  text='pay' title='Buy Airtime' hide='hide' handleClose={closeIcon}>
       <Select selectProviders={selectProviders} selectText='Select network provider'/>
-      <CustomInput type='Phone number' image={Code} placeholder='Phone number' />
-      <CustomInput type='Amount' image={Naira} placeholder='Amount' />
+      <CustomInput type='Phone number' image={Code} />
+      <CustomInput type='Amount' image={Naira} />
       <Select selectProviders={selectMethod} marginTop='10px' selectText='Payment Method' />
       <div className='w-full my-[10px] p-2 flex justify-between items-center'>
         <p>
